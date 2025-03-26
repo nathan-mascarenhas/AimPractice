@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aim Practice</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>AimLabs - Treinamento de Mira</title>
+    <link rel="stylesheet" href="./styles.css">
 </head>
 <body>
     <div class="game-wrapper">
@@ -32,105 +32,73 @@
         <div class="scoreboard">
             <div class="score-item">
                 <span class="label">Pontuação</span>
-                <span class="value" id="score">0</span>
-            </div>
-            <div class="score-item">
-                <span class="label">Tempo</span>
-                <span class="value" id="timer">30</span>
+                <span id="score">0</span>
             </div>
             <div class="score-item">
                 <span class="label">Precisão</span>
-                <span class="value" id="accuracy">0%</span>
+                <span id="accuracy">0%</span>
+            </div>
+            <div class="score-item">
+                <span class="label">Tempo</span>
+                <span id="timer">30</span>
             </div>
             <div class="score-item">
                 <span class="label">Moedas</span>
-                <span class="value coins">
-                    <div class="coin-icon"></div>
-                    <span id="coins">0</span>
-                </span>
+                <span id="coins">0</span>
             </div>
+        </div>
+
+        <div class="controls">
+            <button id="startButton">Iniciar Jogo</button>
+            <button id="pauseButton">Pausar</button>
         </div>
 
         <div class="crosshair-shop">
             <h3>Loja de Miras</h3>
             <div class="crosshair-options">
                 <div class="crosshair-option selected" data-crosshair="default">
-                    <div class="crosshair-default"></div>
-                    <div class="price">Grátis</div>
+                    <div class="crosshair-preview crosshair-default"></div>
+                    <div class="price">Desbloqueado</div>
                 </div>
                 <div class="crosshair-option" data-crosshair="dot">
-                    <div class="crosshair-dot"></div>
+                    <div class="crosshair-preview crosshair-dot"></div>
                     <div class="price">
                         <div class="coin-mini">N</div>
-                        <span>100</span>
+                        <span>5.0</span>
                     </div>
                 </div>
                 <div class="crosshair-option" data-crosshair="circle">
-                    <div class="crosshair-circle"></div>
+                    <div class="crosshair-preview crosshair-circle"></div>
                     <div class="price">
                         <div class="coin-mini">N</div>
-                        <span>250</span>
+                        <span>10.0</span>
                     </div>
                 </div>
                 <div class="crosshair-option" data-crosshair="triangle">
-                    <div class="crosshair-triangle"></div>
+                    <div class="crosshair-preview crosshair-triangle"></div>
                     <div class="price">
                         <div class="coin-mini">N</div>
-                        <span>400</span>
+                        <span>15.0</span>
                     </div>
                 </div>
                 <div class="crosshair-option" data-crosshair="diamond">
-                    <div class="crosshair-diamond"></div>
+                    <div class="crosshair-preview crosshair-diamond"></div>
                     <div class="price">
                         <div class="coin-mini">N</div>
-                        <span>550</span>
+                        <span>20.0</span>
                     </div>
                 </div>
                 <div class="crosshair-option" data-crosshair="star">
-                    <div class="crosshair-star"></div>
+                    <div class="crosshair-preview crosshair-star"></div>
                     <div class="price">
                         <div class="coin-mini">N</div>
-                        <span>1000</span>
+                        <span>25.0</span>
                     </div>
                 </div>
-            </div>
-        </div>
-
-        <div class="controls-list">
-            <h3>Controles</h3>
-            <ul>
-                <li>
-                    <span>Atirar</span>
-                    <span class="key">Click</span>
-                </li>
-                <li>
-                    <span>Pausar</span>
-                    <span class="key">ESC</span>
-                </li>
-                <li>
-                    <span>Mover</span>
-                    <span class="key">Mouse</span>
-                </li>
-            </ul>
-        </div>
-
-        <div class="controls">
-            <div class="sensitivity-control">
-                <label for="sensitivity">Sensibilidade do Mouse</label>
-                <div class="slider-container">
-                    <input type="range" id="sensitivity" min="0.1" max="1.0" step="0.1" value="1.0">
-                    <span id="sensitivityValue">1.0</span>
-                </div>
-            </div>
-            <div class="buttons">
-                <button id="startButton">Iniciar Jogo</button>
-                <button id="resetButton">Reiniciar</button>
             </div>
         </div>
     </div>
 
-    <audio id="shootSound" src="https://www.soundsnap.com/indoor_gun_explosion_burst_sweetener_reverberant_shot_reflection_element_medium_room_a_position_d_1_wav"></audio>
-
-    <script src="script.js"></script>
+    <script src="./script.js"></script>
 </body>
 </html> 
